@@ -1,0 +1,93 @@
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" type="text/css" href="/Users/oyan/Desktop/kbtu/Web-KBTU/w2/instagram/Style.css" >
+</head>
+
+<body>
+<div class="root">
+    <div class="main">
+        <div class="article">
+            <aside class="right">
+                <div class="right-sub">
+                    <img class="hidden-image display-image" src="/Users/oyan/Desktop/kbtu/Web-KBTU/w2/instagram/images/image1.jpg" th:src="@{images/image1.jpeg}" alt="">
+                </div>
+            </aside>
+            <aside class="left">
+                <div class="left-upper-container">
+                    <h1 class="logo">Instagram</h1>
+                    <div class="account-container">
+                        <form class="login-container" id="login-form" method="POST" th:action="@{/auth}" th:object="${user}">
+                            <div class="form-elements-container">
+                                <div class="form-element1">
+                                    <div class="form-account-container">
+                                        <label class="account-label">
+                                            <input class="account-input"
+                                                   aria-label="Telefone, nome de usuário ou email" aria-required="true"
+                                                   autocapitalize="none" autocorrect="off" maxlength="75"
+                                                   name="username" type="text" value="" th:field="*{username}" placeholder="Номер телефона, имя пользователя или эл. адрес">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-element2">
+                                    <div class="form-pass-container">
+                                        <label class="pass-label">
+                                            <input class="pass-input" aria-label="Senha" aria-required="true"
+                                                   autocapitalize="none" autocorrect="off" name="password"
+                                                   type="password" value="" th:field="*{password}" placeholder="Пароль">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-element3">
+                                    <button class="enter-button" type="submit">
+                                        <div class="enter-text">Войти</div>
+                                    </button>
+                                </div>
+                                <div class="form-element4">
+                                    <div class="traco"></div>
+                                    <div class="ou">ИЛИ</div>
+                                    <div class="traco"></div>
+                                </div>
+                                <div class="form-element5">
+                                    <button class='facebook-button' type="button" role="button" href="https://www.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26state%3D%257B%2522fbLoginKey%2522%253A%2522uzii03yc98o41h6ufr21k4i990ow71yj6meoy514vl73h1tas289%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252F%2522%257D%26scope%3Demail%26response_type%3Dcode%252Cgranted_scopes%26locale%3Dpt_BR%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D21deeba8-4490-4b54-bd01-ac3ba6f92302%26shared_id%3DTODO_SHARED_ID%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%2522uzii03yc98o41h6ufr21k4i990ow71yj6meoy514vl73h1tas289%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252F%2522%257D%23_%3D_&display=page&locale=pt_BR&pl_dbl=0">
+                                        <i class="facebook-icon"></i>
+                                        <span class="facebook-button-text">Войти через Facebook</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <a class="forgot" href="https://www.instagram.com/accounts/password/reset/" tabindex="0">Забыли пароль?</a>
+                        </form>
+                    </div>
+                </div>
+                <div class="left-middle-container">
+                    <div class="no-account-container">
+                        <p class="no-account-text">У вас еще нет аккаунта?
+                            <a href="https://www.instagram.com/accounts/emailsignup/" tabindex="0">
+                                <span class="link-text">Зарегистрироваться</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="left-bottom-container">
+                    <p class="left-bottom-text">Установите приложение.</p>
+                    <div class="links-container">
+                        <a class="left-bottom-link1"
+                           href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&amp;ct=igweb.loginPage.badge&amp;mt=8&amp;vt=lo">
+                            <img alt="Disponível na App Store" class="link-image" src="/Users/oyan/Desktop/kbtu/Web-KBTU/w2/instagram/images/appimage1.png" th:src="@{images/appimage1.png}">
+                        </a>
+                        <a class="left-bottom-link2"
+                           href="https://play.google.com/store/apps/details?id=com.instagram.android&amp;referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3D1050D262-AFAF-40F8-A08A-DB319BB972A2%26utm_content%3Dlo%26utm_medium%3Dbadge">
+                            <img alt="Disponível no Google Play" class="link-image" src="/Users/oyan/Desktop/kbtu/Web-KBTU/w2/instagram/images/appimage2.png" th:src="@{images/appimage2.png}">
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+   
+</div>
+</body>
+</html>
