@@ -2,17 +2,26 @@
 <div *ngFor="let product of products">
   <h3>
     <a [title]="product.name + ' details'">
-      {{ product.name }}
+      {{ product.name}}, {{ product.rating }}
     </a>
   </h3>
+  <p class="p1">
+    <img src="{{product.image1}}"  width="150" height="150">
+    <img src="{{product.image2}}"  width="150" height="150">
+    <img src="{{product.image3}}"  width="150" height="150">
+
+  </p>
 
   <p *ngIf="product.description">
     Description: {{ product.description }}
   </p>
 
-  <button (click)="share()">
-    Share
-  </button>
 
-  <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+
+  <iframe
+    src="https://www.facebook.com/plugins/like.php?href=http://www.facebook.com/NiraTechTraining?ref=ts&fref=ts"
+    scrolling="no" frameborder="0"
+    style="border:none; width:450px; height:80px">
+  </iframe>
+
 </div>
