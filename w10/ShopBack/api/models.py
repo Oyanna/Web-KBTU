@@ -15,6 +15,7 @@ class Product(models.Model):
     price = models.FloatField()
     description = models.TextField(default="")
     count = models.IntegerField()
+    isActive = models.BooleanField(default=False)
     category = models.ForeignKey(Category, default=None, on_delete=models.CASCADE)
 
     def to_json(self):
@@ -23,5 +24,6 @@ class Product(models.Model):
             'name': self.name,
             'price': self.price,
             'description': self.description,
-            'count': self.count
+            'count': self.count,
+            'isActive' : self.isActive
         }
